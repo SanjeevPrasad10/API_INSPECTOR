@@ -16,8 +16,6 @@ Chrome DevTools' Network panel is powerful, but it shows **everything** — HTML
 - ⏱️ **Instant Latency & Status:** Spot slow endpoints and `4xx` / `5xx` errors at a glance.
 - 📋 **1-Click "Copy as cURL":** Instantly replay failing requests directly in your terminal, Postman, or Thunder Client.
 - 🔍 **Payload & Response Inspector:** Expand any request card to see formatted Request Payloads, Response JSON, and Headers.
-- 🏷️ **Filter & Search:** Filter by endpoint string (`/users`, `graphql`) or category (`All`, `Errors`, `Fetch`, `XHR`).
-- 🔢 **Live Tab Badge:** See an instant badge count on your Chrome toolbar showing how many API calls the active tab has fired.
 
 ---
 
@@ -30,18 +28,7 @@ Chrome DevTools' Network panel is powerful, but it shows **everything** — HTML
    ```
 3. Enable **"Developer mode"** (toggle in the top-right corner).
 4. Click **"Load unpacked"** (top-left button).
-5. Select this folder:
-   ```
-   C:\Users\SANJIV PRASAD\OneDrive\Desktop\api-inspector
-   ```
+5. Select these downloaded folder from your computer:
 6. **Done!** Pin the ⚡ **API Inspector** icon to your toolbar.
 7. Open any website (e.g. `github.com` or `youtube.com`) or your local React app, click the icon, and watch live API calls populate!
 
----
-
-## 🛠️ Tech Stack
-- **Manifest V3** standard
-- **Main World Content Script Injection** (`world: "MAIN"`)
-- **`Response.clone()` Stream Protection** (never breaks website logic)
-- **`chrome.storage.local` Tab-Isolated Cache**
-- **Modern Glassmorphic Dark UI**
