@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Inspector</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-left">
+        <div class="logo-badge">⚡</div>
+        <div>
+          <h1>API Inspector</h1>
+          <p class="subtitle" id="tabInfo">Monitoring Active Tab</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <span class="count-pill" id="callCount">0 Calls</span>
+        <button id="pauseBtn" class="icon-btn" title="Pause/Resume live feed to inspect calls without interruptions">⏸️ Pause</button>
+        <button id="clearBtn" class="icon-btn" title="Clear all recorded calls">🗑️</button>
+      </div>
+    </header>
+
+    <!-- Filter & Search Toolbar -->
+    <div class="toolbar">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Filter endpoint (e.g. /users, graphql, auth)..." />
+      </div>
+      <div class="filter-pills">
+        <button class="filter-pill active" data-filter="all">All</button>
+        <button class="filter-pill" data-filter="errors">Errors</button>
+        <button class="filter-pill" data-filter="fetch">Fetch</button>
+        <button class="filter-pill" data-filter="xhr">XHR</button>
+      </div>
+    </div>
+
+    <!-- Calls List -->
+    <main class="calls-list" id="callsList">
+      <div class="empty-state" id="emptyState">
+        <div class="empty-icon">📡</div>
+        <h3>No API calls detected yet</h3>
+        <p>Browse or refresh the page to intercept live fetch & XHR requests.</p>
+      </div>
+    </main>
+
+    <!-- Footer Toast -->
+    <footer class="app-footer">
+      <span>Built for Frontend Engineers</span>
+      <span id="toast" class="toast">Copied to clipboard!</span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
